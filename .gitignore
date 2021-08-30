@@ -1,22 +1,23 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/.pnp
-.pnp.js
+client/node_modules
+client/.pnp
+client/.pnp.js
 
 # testing
-/coverage
+client/coverage
 
 # next.js
-/.next/
-/out/
+client/.next/
+client/out/
 
 # production
-/build
+client/build
 
 # misc
 .DS_Store
+client/.vscode/
 
 # debug
 npm-debug.log*
@@ -28,4 +29,5 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
-client/.vscode/
+.next
+node_modules
