@@ -1,9 +1,9 @@
+import SplitText from "./shared/SplitText"
+
 const Logo = () => {
     return (
-        <div>
-            <h1 className="navbar-brand">ChessMLeter</h1>
-        </div>
+        <h1><SplitText copy="ChessMLeter" role="heading" /></h1>
     );
 }
- 
+
 export default Logo;
