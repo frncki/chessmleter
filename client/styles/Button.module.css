@@ -20,7 +20,7 @@
 .btn a:before,
 .btn a:after{
   position: absolute;
-  content: "BUTTON";
+  content: "Evaluate";
   height: 55px;
   width: 180px;
   display: flex;
