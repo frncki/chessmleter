@@ -35,3 +35,5 @@ node_modules
 client/package-lock.json
 
 api/.env
+
+client/.env

@@ -6,8 +6,14 @@ import axios from 'axios'
 const Button = ({ value }) => {
     const sendPosition = async (e) => {
         e.preventDefault();
+        if (value === "") {
+            // value = "rnbq1bnr/ppppkppp/8/4p3/4P3/8/PPPPKPPP/RNBQ1BNR w - - 2 3"
+            value = "some chess position"
+        }
 
-        const response = await axios.post(`http://localhost:8080/eval/${value}`)
+        // value = JSON.stringify(value)
+
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/eval/${value}`)
         console.log(response.data)
     }
 
