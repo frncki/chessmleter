@@ -1,6 +1,7 @@
 import * as React from 'react'
-import Button from './shared/Button'
-import Input from './shared/Input'
+import '../styles/Card.css'
+import Button from './Button'
+import Input from './Input'
 
 const InputCard = () => {
     const [fenPos, setFenPos] = React.useState('');
