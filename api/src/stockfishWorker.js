@@ -1,18 +1,21 @@
-import Stockfish from 'stockfish'
+import stockfish from '../node_modules/stockfish/src/stockfish'
 
 const evaluate = (fenPos) => {
-    let stockfish = Stockfish();
-    /*
+	stockfish = STOCKFISH();
+
     stockfish.postMessage("uci");
-    stockfish.postMessage("ucinewgame");
-    stockfish.postMessage(`position fen ${fenPos}`);
-    stockfish.postMessage("go depth 20");
+	stockfish.postMessage("setoption name Hash value 32");
+	stockfish.postMessage("isready");
+    // stockfish.postMessage("ucinewgame");
+    // stockfish.postMessage(`position fen ${fenPos}`);
+    // stockfish.postMessage("go depth 20");
     stockfish.onmessage = (event) => {
         //NOTE: Web Workers wrap the response in an object.
         console.log(event.data ? event.data : event);
     };
-    */
 }
+
+export { evaluate }
 
 /*
 Examples:

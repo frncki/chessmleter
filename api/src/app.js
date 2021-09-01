@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import cors from 'cors';
 import express from 'express';
+// import { evaluate } from './stockfishWorker.js'
 
 const app = express();
 
@@ -10,8 +11,16 @@ app.get('/', (req, res) => {
   return res.send('ChessMLeter API!');
 });
 
-app.get('/eval/:fenPos', (req, res) => {
-  return res.send('here there will be yours eval');
+app.post('/eval/:fenPos', (req, res) => {
+  const fenPosition = req.params.fenPos
+  console.log(fenPosition)
+  // evaluate(fenPosition);
+  return res.send(`here will be your eval of ${fenPosition}`);
+});
+
+app.post('/eval', (req, res) => {
+  console.log(req.data)
+  return res.send('got it');
 });
 
 app.listen(process.env.PORT, () =>
