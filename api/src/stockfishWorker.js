@@ -1,4 +1,4 @@
-import stockfish from '../node_modules/stockfish/src/stockfish'
+import stockfish from 'stockfish'
 
 const evaluate = (fenPos) => {
 	stockfish = STOCKFISH();

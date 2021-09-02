@@ -7,6 +7,9 @@ const app = express();
 
 app.use(cors());
 
+app.use(express.json())
+app.use(express.urlencoded())
+
 app.get('/', (req, res) => {
   return res.send('ChessMLeter API!');
 });
@@ -19,8 +22,8 @@ app.post('/eval/:fenPos', (req, res) => {
 });
 
 app.post('/eval', (req, res) => {
-  console.log(req.data)
-  return res.send('got it');
+  console.log(req.body)
+  return res.send(req.body.fenPosition);
 });
 
 app.listen(process.env.PORT, () =>
