@@ -10,8 +10,8 @@ const Button = ({ value }) => {
             value = "rnbq1bnr/ppppkppp/8/4p3/4P3/8/PPPPKPPP/RNBQ1BNR w - - 2 3"
         }
 
-        // const response = await axios.post(`${process.env.REACT_APP_API_URL}/eval/${encodeURIComponent(value)}`)
-        const response = await axios.post(`${process.env.REACT_APP_API_URL}/eval/`, {
+        // const response = await axios.post(`${process.env.REACT_APP_API_URL}/evaluation/${encodeURIComponent(value)}`)
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/evaluation/`, {
             fenPosition: value
         })
         console.log(response.data)
